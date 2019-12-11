@@ -55,6 +55,7 @@ public class Item_click extends AppCompatActivity  implements Serializable {
     Button yeuthich;
     TextView tentruyen;
     TextView theloai;
+    TextView tomtat;
     int id;
     FragmentManager fragmentManager;
 
@@ -65,14 +66,17 @@ public class Item_click extends AppCompatActivity  implements Serializable {
         ActionBar actionBar = getSupportActionBar();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         doctruyen=(Button)findViewById(R.id.doctruyenbut);
+        tomtat=(TextView)findViewById(R.id.nd);
         yeuthich=(Button)findViewById(R.id.yeuthichbut);
         img = (ImageView) findViewById(R.id.single_lap_img);
         tentruyen = (TextView) findViewById(R.id.chitiet_tentruyen);
         theloai=(TextView)findViewById(R.id.chitiet_theoai);
         String data = getIntent().getExtras().getString("img");
         String data2 = getIntent().getExtras().getString("tentruyen");
+        String data3 = getIntent().getExtras().getString("tomtat");
         String tl= getIntent().getExtras().getString("theloai");
         id= getIntent().getExtras().getInt("id");
+        tomtat.setText(data3);
         Picasso.with(context).load(Uri.parse(data)).into(img);
         tentruyen.setText(data2);
         theloai.setText("Thể loại: "+tl);

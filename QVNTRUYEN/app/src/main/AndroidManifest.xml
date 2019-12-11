@@ -24,6 +24,9 @@
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar"></activity>
         <activity android:name=".Item_click"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar"></activity>
+        <activity
+            android:name=".LoaiTruyen"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
         <activity android:name=".Item_List"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar"></activity>
         <activity android:name=".Search"></activity>

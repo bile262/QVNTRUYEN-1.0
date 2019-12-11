@@ -73,7 +73,8 @@ public class FragmentList extends Fragment {
                                                 object.getString("TenTruyen"),
                                                 object.getString("TheLoai"),
                                                 object.getString("Anh"),
-                                                object.getString("TacGia")
+                                                object.getString("TacGia"),
+                                                object.getString("TomTat")
                                         ));
                                     }
                                 }
@@ -104,6 +105,7 @@ public class FragmentList extends Fragment {
                 intent.putExtra("tentruyen", HT.get(position).getTenTruyen());
                 intent.putExtra("theloai", HT.get(position).getTheLoai());
                 intent.putExtra("id", HT.get(position).getID());
+                intent.putExtra("tomtat", HT.get(position).getTomTat());
                 startActivity(intent);
             }
         });

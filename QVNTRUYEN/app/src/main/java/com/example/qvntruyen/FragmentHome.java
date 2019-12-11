@@ -69,7 +69,8 @@ public class FragmentHome extends Fragment {
                                         object.getString("TenTruyen"),
                                         object.getString("TheLoai"),
                                         object.getString("Anh"),
-                                        object.getString("TacGia")
+                                        object.getString("TacGia"),
+                                        object.getString("TomTat")
                                 ));
                             } catch (JSONException e) {
                                 e.printStackTrace();
@@ -97,6 +98,7 @@ public class FragmentHome extends Fragment {
                 intent.putExtra("tentruyen", img_detail.get(position).getTenTruyen());
                 intent.putExtra("theloai", img_detail.get(position).getTheLoai());
                 intent.putExtra("id", img_detail.get(position).getID());
+                intent.putExtra("tomtat", img_detail.get(position).getTomTat());
                 startActivity(intent);
             }
         });

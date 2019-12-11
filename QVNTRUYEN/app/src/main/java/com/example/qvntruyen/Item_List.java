@@ -55,6 +55,7 @@ public class Item_List extends AppCompatActivity  implements Serializable {
     Button yeuthich;
     TextView tentruyen;
     TextView theloai;
+    TextView tomtat;
     int id;
     FragmentManager fragmentManager;
 
@@ -66,6 +67,9 @@ public class Item_List extends AppCompatActivity  implements Serializable {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         doctruyen=(Button)findViewById(R.id.doctruyenlistbut);
         yeuthich=(Button)findViewById(R.id.bothichbut);
+        tomtat=(TextView)findViewById(R.id.nd_list);
+        String data3 = getIntent().getExtras().getString("tomtat");
+        tomtat.setText(data3);
         img = (ImageView) findViewById(R.id.single_lap_img);
         tentruyen = (TextView) findViewById(R.id.chitiet_tentruyen_list);
         theloai=(TextView)findViewById(R.id.chitiet_theoai_list);

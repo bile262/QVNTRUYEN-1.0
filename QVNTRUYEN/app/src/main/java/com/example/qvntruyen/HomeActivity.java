@@ -52,7 +52,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 switch (menuItem.getItemId()){
                     case  R.id.dammy:
                         String tr = "Đam mỹ";
-                        Toast.makeText(HomeActivity.this,"Mam mỹ",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(HomeActivity.this,"Đam mỹ",Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(HomeActivity.this, LoaiTruyen.class);
 
                         intent.putExtra("loaitruyen","Đam mỹ");
@@ -69,6 +69,24 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                         intent = new Intent(HomeActivity.this, LoaiTruyen.class);
                         intent.putExtra("loaitruyen", "Tiên hiệp");
                         Toast.makeText(HomeActivity.this,"Tiên hiệp",Toast.LENGTH_SHORT).show();
+                        startActivity(intent);
+                        return true;
+                    case  R.id.haihuoc:
+                        intent = new Intent(HomeActivity.this, LoaiTruyen.class);
+                        intent.putExtra("loaitruyen", "Hài hước");
+                        Toast.makeText(HomeActivity.this,"Hài hước",Toast.LENGTH_SHORT).show();
+                        startActivity(intent);
+                        return true;
+                    case  R.id.lichsu:
+                        intent = new Intent(HomeActivity.this, LoaiTruyen.class);
+                        intent.putExtra("loaitruyen", "Lịch sử");
+                        Toast.makeText(HomeActivity.this,"Lịch sử",Toast.LENGTH_SHORT).show();
+                        startActivity(intent);
+                        return true;
+                    case  R.id.sac:
+                        intent = new Intent(HomeActivity.this, LoaiTruyen.class);
+                        intent.putExtra("loaitruyen", "Sắc");
+                        Toast.makeText(HomeActivity.this,"Sắc",Toast.LENGTH_SHORT).show();
                         startActivity(intent);
                         return true;
                 }

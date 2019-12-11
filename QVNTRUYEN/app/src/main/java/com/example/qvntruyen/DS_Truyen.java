@@ -6,13 +6,15 @@ public class DS_Truyen {
     private String TheLoai;
     private  String Anh;
     private  String TacGia;
+    private  String TomTat;
 
-    public DS_Truyen(int ID, String tenTruyen, String theLoai, String anh, String tacGia) {
+    public DS_Truyen(int ID, String tenTruyen, String theLoai, String anh, String tacGia, String tomTat) {
         this.ID = ID;
         TenTruyen = tenTruyen;
         TheLoai = theLoai;
         Anh = anh;
         TacGia = tacGia;
+        TomTat=tomTat;
     }
 
     public int getID() {
@@ -53,5 +55,12 @@ public class DS_Truyen {
 
     public void setTacGia(String tacGia) {
         TacGia = tacGia;
+    }
+    public String getTomTat() {
+        return TomTat;
+    }
+
+    public void setTomTat(String tomTat) {
+        TomTat = tomTat;
     }
 }

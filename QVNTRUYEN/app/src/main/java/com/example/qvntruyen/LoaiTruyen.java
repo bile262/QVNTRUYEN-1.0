@@ -52,7 +52,7 @@ public class LoaiTruyen extends AppCompatActivity {
         text =intent.getStringExtra("loaitruyen");
 
 
-        ad_truyen = new Ad_Truyen(getApplicationContext(),R.layout.gv_item,mangtr);
+        ad_truyen = new Ad_Truyen(this,R.layout.gv_item,mangtr);
         gridView.setAdapter(ad_truyen);
         GetData(url);
         Info();
@@ -84,7 +84,8 @@ public class LoaiTruyen extends AppCompatActivity {
                                             object.getString("TenTruyen"),
                                             object.getString("TheLoai"),
                                             object.getString("Anh"),
-                                            object.getString("TacGia")
+                                            object.getString("TacGia"),
+                                            object.getString("TomTat")
                                     ));
                                 }
 
@@ -114,6 +115,7 @@ public class LoaiTruyen extends AppCompatActivity {
                 intent.putExtra("tentruyen", mangtr.get(position).getTenTruyen());
                 intent.putExtra("theloai", mangtr.get(position).getTheLoai());
                 intent.putExtra("id", mangtr.get(position).getID());
+                intent.putExtra("tomtat", mangtr.get(position).getTomTat());
                 startActivity(intent);
             }
         });

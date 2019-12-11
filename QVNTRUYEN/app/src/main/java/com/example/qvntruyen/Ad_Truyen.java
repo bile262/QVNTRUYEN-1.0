@@ -51,6 +51,7 @@ public class Ad_Truyen extends BaseAdapter {
         TextView theloai;
         TextView tacgia;
         ImageView img;
+        TextView tomtat;
     }
 
     @Override
@@ -58,14 +59,15 @@ public class Ad_Truyen extends BaseAdapter {
         ViewHolder holder;
         if(view==null)
         {
-          holder= new ViewHolder();
-          LayoutInflater inflater=(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-          view = inflater.inflate(layout,null);
-          holder.img=(ImageView) view.findViewById(R.id.gv_item_iv_image);
-          holder.name=(TextView) view.findViewById(R.id.gv_item_tv_nameimage);
-          holder.theloai=(TextView) view.findViewById(R.id.gv_item_theloai);
+            holder= new ViewHolder();
+            LayoutInflater inflater=(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            view = inflater.inflate(layout,null);
+            holder.img=(ImageView) view.findViewById(R.id.gv_item_iv_image);
+            holder.name=(TextView) view.findViewById(R.id.gv_item_tv_nameimage);
+            holder.theloai=(TextView) view.findViewById(R.id.gv_item_theloai);
             holder.tacgia=(TextView) view.findViewById(R.id.gv_item_tg);
-          view.setTag(holder);
+            holder.tomtat=(TextView)view.findViewById(R.id.gv_item_tt);
+            view.setTag(holder);
         }else{
             holder=(ViewHolder)view.getTag();
         }
@@ -74,6 +76,7 @@ public class Ad_Truyen extends BaseAdapter {
         holder.theloai.setText(ds_truyen.getTheLoai());
         holder.tacgia.setText(ds_truyen.getTacGia());
         Picasso.with(context).load(ds_truyen.getAnh()).into(holder.img);
+        holder.tomtat.setText(ds_truyen.getTomTat());
         //int ImgID = getMipMapResIdByName(ds_truyen.getAnh());
         //holder.img.setImageResource(ImgID);
         //Toast.makeText(context, a, Toast.LENGTH_SHORT).show();

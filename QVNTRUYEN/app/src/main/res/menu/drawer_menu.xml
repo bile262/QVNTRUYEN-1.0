@@ -10,6 +10,15 @@
         <item android:id="@+id/tienhiep"
             android:title="Tiên hiệp">
         </item>
+        <item android:id="@+id/haihuoc"
+            android:title="Hài hước">
+        </item>
+        <item android:id="@+id/lichsu"
+            android:title="Lịch sử">
+        </item>
+        <item android:id="@+id/sac"
+            android:title="Sắc">
+        </item>
 
 
 

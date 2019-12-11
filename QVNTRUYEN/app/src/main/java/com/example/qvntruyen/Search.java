@@ -65,7 +65,7 @@ public class Search extends AppCompatActivity {
                     for (DS_Truyen i : list){
                         if (i.getTenTruyen().trim().toLowerCase().contains(newText.toLowerCase()))
                             list2.add(i);
-    //                        Toast.makeText(Search.this, i.getTenTruyen(), Toast.LENGTH_SHORT).show();
+                        //                        Toast.makeText(Search.this, i.getTenTruyen(), Toast.LENGTH_SHORT).show();
                     }
 //                if(newText.equals(""))
 //                    list2.clear();
@@ -96,7 +96,8 @@ public class Search extends AppCompatActivity {
                                         object.getString("TenTruyen"),
                                         object.getString("TheLoai"),
                                         object.getString("Anh"),
-                                        object.getString("TacGia")
+                                        object.getString("TacGia"),
+                                        object.getString("TomTat")
                                 ));
                             } catch (JSONException e) {
                                 e.printStackTrace();
@@ -124,6 +125,7 @@ public class Search extends AppCompatActivity {
                 intent.putExtra("tentruyen", list2.get(position).getTenTruyen());
                 intent.putExtra("theloai", list2.get(position).getTheLoai());
                 intent.putExtra("id", list2.get(position).getID());
+                intent.putExtra("tomtat", list2.get(position).getTomTat());
                 startActivity(intent);
             }
         });
