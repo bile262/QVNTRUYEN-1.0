@@ -49,6 +49,14 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nội dung"
+        android:textSize="15dp"
+        android:textColor="#fff"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -62,8 +70,8 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
-            android:textSize="17dp"
-            android:text="Đọc truyện" />
+            android:text="Đọc truyện"
+            android:textSize="17dp" />
 
         <Button
             android:id="@+id/yeuthichbut"
@@ -72,8 +80,8 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="30dp"
             android:layout_weight="1"
-            android:textSize="17dp"
-            android:text="Yêu thích" />
+            android:text="Yêu thích"
+            android:textSize="17dp" />
     </LinearLayout>
 
     <ListView

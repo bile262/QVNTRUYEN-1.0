@@ -48,7 +48,13 @@
         </LinearLayout>
 
     </LinearLayout>
-
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nội dung"
+        android:textSize="15dp"
+        android:textColor="#fff"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
