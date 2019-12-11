@@ -8,12 +8,14 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="63dp"
         android:text="List Yêu thích"
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="30dp"
-        android:textColor="#111" />
+        android:textColor="#fff"
+        android:background="@mipmap/bg1"
+        />
 
     <LinearLayout
         android:orientation="vertical"

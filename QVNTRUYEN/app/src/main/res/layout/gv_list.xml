@@ -9,16 +9,20 @@
     android:layout_marginLeft="5dp"
     app:cardCornerRadius="16dp">
     <LinearLayout
+        android:id="@+id/ll_op"
+        android:padding="10dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:background="@android:color/transparent"
         android:gravity="center">
 
         <ImageView
             android:id="@+id/gv_item_iv_image"
             android:layout_width="170dp"
-            android:layout_height="250dp"
-            android:scaleType="fitXY"
+            android:layout_height="170dp"
+            android:scaleType="fitCenter"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"

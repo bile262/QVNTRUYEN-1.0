@@ -5,7 +5,7 @@
     <TextView
         android:padding="10dp"
         android:layout_marginBottom="1dp"
-        android:background="#3e3e3e"
+        android:background="#833E3E3E"
         android:id="@+id/chaptruyen"
         android:layout_marginTop="10dp"
         android:textSize="15dp"

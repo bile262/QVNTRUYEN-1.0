@@ -75,7 +75,7 @@ public class Item_List extends AppCompatActivity  implements Serializable {
         id= getIntent().getExtras().getInt("id");
         Picasso.with(context).load(Uri.parse(data)).into(img);
         tentruyen.setText(data2);
-        theloai.setText(tl);
+        theloai.setText("Thể loại: "+tl);
         listVieư=(ListView)findViewById(R.id.listchaplist);
         img_detail=new ArrayList<>();
         listchap =new ChitietTruyenAdapter(this,R.layout.dongchap,img_detail);
