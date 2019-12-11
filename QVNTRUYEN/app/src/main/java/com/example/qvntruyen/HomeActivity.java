@@ -46,7 +46,35 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         bottomNavigationView.setOnNavigationItemSelectedListener(navlis);
 
         NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case  R.id.dammy:
+                        String tr = "Đam mỹ";
+                        Toast.makeText(HomeActivity.this,"Mam mỹ",Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(HomeActivity.this, LoaiTruyen.class);
+
+                        intent.putExtra("loaitruyen","Đam mỹ");
+                        startActivity(intent);
+                        return true;
+                    case  R.id.ngontinh:
+                        intent = new Intent(HomeActivity.this, LoaiTruyen.class);
+
+                        intent.putExtra("loaitruyen", "Ngôn tình");
+                        Toast.makeText(HomeActivity.this,"Ngôn tình",Toast.LENGTH_SHORT).show();
+                        startActivity(intent);
+                        return true;
+                    case  R.id.tienhiep:
+                        intent = new Intent(HomeActivity.this, LoaiTruyen.class);
+                        intent.putExtra("loaitruyen", "Tiên hiệp");
+                        Toast.makeText(HomeActivity.this,"Tiên hiệp",Toast.LENGTH_SHORT).show();
+                        startActivity(intent);
+                        return true;
+                }
+                return false;
+            }
+        });
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawer,toolbar,
                 R.string.navigation_drawer_open,R.string.navigation_drawer_close);
@@ -124,6 +152,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         }
         return false;
     }
+
+
+
     private BottomNavigationView.OnNavigationItemSelectedListener navlis=
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
